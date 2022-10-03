@@ -1,0 +1,22 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    What would you like to announce?
+    <form action="/announcements" method="POST">
+      <input type="text" name="msg" value="" autofocus="true">
+      <input type="submit" value="Submit">
+    </form>
+
+    {{#messages}}
+      <div id="msg-{{@index}}">
+        {{content}}
+      </div>
+    {{/messages}}
+
+  </body>
+
+</html>
+  
